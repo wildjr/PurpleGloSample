@@ -7,11 +7,23 @@ public class AIMovement : MonoBehaviour
 	public bool canMove;
 	public float moveSpeed;
 
-    void Update()
+	private AudioSource audioSource;
+
+	private void Start()
+	{
+		audioSource = GetComponent<AudioSource>();
+	}
+
+	void Update()
     {
 		if (canMove)
 		{
+			if (!audioSource.isPlaying)
+				audioSource.Play();
+
 			transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
 		}
+		else if (audioSource.isPlaying)
+			audioSource.Stop();
     }
 }
