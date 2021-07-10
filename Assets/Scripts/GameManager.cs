@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
 	public GameObject goText;
 	public GameObject win;
 	public GameObject loss;
+	public Text scoreText;
 
 	public GameObject startPos;
 	public GameObject endPos;
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
 			if(!winnerDetermined)
 			{
 				win.SetActive(true);
+				scoreText.text += Mathf.Floor((player.transform.position.x - ai.transform.position.x)*100)*10;
 				winnerDetermined = true;
 			}
 		}

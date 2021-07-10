@@ -404,7 +404,7 @@ ScriptsOnlyBuild:
     className: PlayerMovement
   - hash:
       serializedVersion: 2
-      Hash: bf182999bdbf1475f9bd64fdc37579c2
+      Hash: 9686254791eaa0fc999e3328512c9902
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
